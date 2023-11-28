@@ -17,7 +17,16 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('2nd page'),
+        backgroundColor: Colors.grey[200],
+        title: Text('Bookworm',
+          style: TextStyle(
+            color: Colors.teal,
+            fontWeight: FontWeight.bold,
+            fontSize: 28,
+          ),
+
+        ),
+        centerTitle: true,
       ),
       body: ListView(
         children: [Padding(
