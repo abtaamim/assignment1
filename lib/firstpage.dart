@@ -19,7 +19,13 @@ class _FirstPageState extends State<FirstPage> {
         "One boy got into the car, two did not, and something terrible happened -- something that ended their friendship and changed all three boys forever.\n\n"
         "Twenty-five years later, Sean is a homicide detective. Jimmy is an ex-con who owns a corner store. And Dave is trying to hold his marriage together and keep his demons at bay -- demons that urge him to do terrible things. When Jimmy's daughter is found murdered, Sean is assigned to the case. His investigation brings him into conflict with Jimmy, who finds his old criminal impulses tempt him to solve the crime with brutal justice. And then there is Dave, who came home the night Jimmy's daughter died covered in someone else's blood.",
         photo: 'assets/mystic.jpg',price: '12.5'),
-    Description(book: 'The girl with the Dragon Tattue ', author: 'by Gillian Flynn', rating: 4.5, ratingcount: 34567,about: 'abcd',photo: 'assets/dragon.jpg',price: '12.5'),
+    Description(book: 'The girl with the Dragon Tattue ', author: 'by Gillian Flynn', rating: 4.5, ratingcount: 34567,
+        about: "Harriet Vanger, a scion of one of Sweden’s wealthiest families disappeared over forty years ago. All these years later, her aged uncle continues to seek the truth. "
+        "He hires Mikael Blomkvist, a crusading journalist recently trapped by a libel conviction, to investigate."
+        " He is aided by the pierced and tattooed punk prodigy Lisbeth Salander. Together they tap into a vein of unfathomable iniquity and astonishing corruption.\n\n"
+        "An international publishing sensation, Stieg Larsson’s The Girl with the Dragon Tattoo combines murder mystery,"
+        " family saga, love story, and financial intrigue into one satisfyingly complex and entertainingly atmospheric novel.",
+        photo: 'assets/dragon.jpg',price: '12.5'),
   ];
 
   @override
