@@ -94,6 +94,25 @@ class _SecondPageState extends State<SecondPage> {
               Container(
                 child: DropdownMenuExample(),
               ),
+              SizedBox(height: 18.0),
+              Container(
+                alignment: Alignment.center,
+                child: ElevatedButton.icon(
+
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                  label: const Text('Go Back! '),
+                  icon: Icon(Icons.arrow_back_ios_outlined),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black54,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                    ),
+                  ),
+
+                ),
+              ),
 
             ],
 
