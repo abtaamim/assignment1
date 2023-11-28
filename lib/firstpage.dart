@@ -14,18 +14,24 @@ class _FirstPageState extends State<FirstPage> {
          "that she kept secrets from him. He swears it isnt true. A police examination of his computer shows strange searches. He says they weren't made by him. And then there are the persistent calls on his mobile phone."
          "\nSo what did happen to Nicks beautiful wife?",
         photo: 'assets/gonegirl.jpg',price: '12.5'),
-    Description(book: 'Mystic River', author: 'by Gillian Flynn', rating: 4.5, ratingcount: 34567,
+    Description(book: 'Mystic River', author: 'by Dennis Lehane', rating: 4.5, ratingcount: 34567,
         about: "When they were children, Sean Devine, Jimmy Marcus, and Dave Boyle were friends. But then a strange car pulled up to their street."
         "One boy got into the car, two did not, and something terrible happened -- something that ended their friendship and changed all three boys forever.\n\n"
         "Twenty-five years later, Sean is a homicide detective. Jimmy is an ex-con who owns a corner store. And Dave is trying to hold his marriage together and keep his demons at bay -- demons that urge him to do terrible things. When Jimmy's daughter is found murdered, Sean is assigned to the case. His investigation brings him into conflict with Jimmy, who finds his old criminal impulses tempt him to solve the crime with brutal justice. And then there is Dave, who came home the night Jimmy's daughter died covered in someone else's blood.",
         photo: 'assets/mystic.jpg',price: '12.5'),
-    Description(book: 'The girl with the Dragon Tattue ', author: 'by Gillian Flynn', rating: 4.5, ratingcount: 34567,
+    Description(book: 'The girl with the Dragon Tattue ', author: 'by Stieg Larsson', rating: 4.5, ratingcount: 34567,
         about: "Harriet Vanger, a scion of one of Sweden’s wealthiest families disappeared over forty years ago. All these years later, her aged uncle continues to seek the truth. "
         "He hires Mikael Blomkvist, a crusading journalist recently trapped by a libel conviction, to investigate."
         " He is aided by the pierced and tattooed punk prodigy Lisbeth Salander. Together they tap into a vein of unfathomable iniquity and astonishing corruption.\n\n"
         "An international publishing sensation, Stieg Larsson’s The Girl with the Dragon Tattoo combines murder mystery,"
         " family saga, love story, and financial intrigue into one satisfyingly complex and entertainingly atmospheric novel.",
         photo: 'assets/dragon.jpg',price: '12.5'),
+    Description(book: "The Bone Collector", author: "by Jeffery Deaver", rating: 4.2, ratingcount: 17781,
+        about: "Lincoln Rhyme was once a brilliant criminologist, a genius in the field of forensics -- until an accident left him physically and emotionally shattered."
+        " But now a diabolical killer is challenging Rhyme to a terrifying and ingenious duel of wits. With police detective Amelia Sachs by his side, "
+        "Rhyme must follow a labyrinth of clues that reaches back to a dark chapter in New York City's past -- and reach further into the"
+        "darkness of the mind of a madman who won't stop until he has stripped life down to the bone.",
+        photo: 'assets/bone.jpg', price: '13.85')
   ];
 
   @override
