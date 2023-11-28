@@ -17,7 +17,16 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('2nd page'),
+        backgroundColor: Colors.grey[200],
+        title: Text('Bookworm',
+          style: TextStyle(
+            color: Colors.teal,
+            fontWeight: FontWeight.bold,
+            fontSize: 28,
+          ),
+
+        ),
+        centerTitle: true,
       ),
       body: ListView(
         children: [Padding(
@@ -93,6 +102,25 @@ class _SecondPageState extends State<SecondPage> {
               SizedBox(height: 10.0),
               Container(
                 child: DropdownMenuExample(),
+              ),
+              SizedBox(height: 18.0),
+              Container(
+                alignment: Alignment.center,
+                child: ElevatedButton.icon(
+
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                  label: const Text('Go Back! '),
+                  icon: Icon(Icons.arrow_back_ios_outlined),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black54,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                    ),
+                  ),
+
+                ),
               ),
 
             ],
