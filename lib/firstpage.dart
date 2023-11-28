@@ -46,13 +46,7 @@ class _FirstPageState extends State<FirstPage> {
             color: Colors.teal,
             fontWeight: FontWeight.bold,
             fontSize: 28,
-
-
-
           ),
-
-
-
         ),
         backgroundColor: Colors.grey[200],
       ),
