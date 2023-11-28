@@ -40,9 +40,21 @@ class _FirstPageState extends State<FirstPage> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(
-          'BOOK',
+          textAlign: TextAlign.end,
+          'Bookworm',
+          style: TextStyle(
+            color: Colors.teal,
+            fontWeight: FontWeight.bold,
+            fontSize: 28,
+
+
+
+          ),
+
+
 
         ),
+        backgroundColor: Colors.grey[200],
       ),
       body: SingleChildScrollView(
         child: Column(
