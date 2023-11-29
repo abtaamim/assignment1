@@ -185,9 +185,8 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
   Widget build(BuildContext context) {
     return DropdownButton(
       value: dropdownValue,
-     // initialSelection: list.first,
       onChanged: (String? value) {
-        widget.onBookTypeSelected(value!); // Notify the parent about the selected book type
+        widget.onBookTypeSelected(value!);
         setState(() {
           dropdownValue = value;
         });
@@ -199,15 +198,6 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
         );
       }).toList(),
 
-     /* onSelected: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
-        return DropdownMenuEntry<String>(value: value, label: value);
-      }).toList(),*/
     );
   }
 }
