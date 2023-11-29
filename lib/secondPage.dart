@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:assignment1/firstpage.dart';
 class SecondPage extends StatefulWidget{
-  String book,author,about,photo,price;
-  double rating;
+  String book,author,about,photo;
+  double rating,price;
   int ratingcount;
   SecondPage({required this.book,required this. author,required this.rating,required this.ratingcount,required this.about,required this.photo,required this.price});
 
@@ -12,9 +12,21 @@ class SecondPage extends StatefulWidget{
 
 class _SecondPageState extends State<SecondPage> {
 
-  //SecondPage des;
+
+  String selectedBookType = list.first;
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {double price = widget.price;
+  if (selectedBookType == "Paperback") {
+    price += 5.0; // Adjust the price for Paperback
+  } else if (selectedBookType == "Kindle") {
+    price -= 3.0; // Adjust the price for Kindle
+  }
+  else if (selectedBookType == "Hardcover") {
+    price += 7.0; // Adjust the price for Kindle
+  }
+  else if(selectedBookType == "Audiobook"){
+    price=0;}
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -63,10 +75,13 @@ class _SecondPageState extends State<SecondPage> {
                ),
                ),
               SizedBox(height: 2.0),
-              Container(
-                  child: RatingBar(rating: widget.rating,ratingCount: widget.ratingcount),
-                alignment: Alignment.centerLeft,
 
+              Row(children:<Widget>[
+
+                RatingBar(rating: widget.rating,ratingCount: widget.ratingcount),
+                SizedBox(width: 8.0),
+                Text(widget.ratingcount.toString()),
+              ]
 
               ),
               SizedBox(height: 10.0),
@@ -91,7 +106,7 @@ class _SecondPageState extends State<SecondPage> {
               SizedBox(height: 10.0),
               Container(
                 child: Text(
-                 "Price: \$${widget.price}" ,
+              "Price: \$${price.toStringAsFixed(2)}",
                   style: TextStyle(
                     fontSize: 25.0,
                     color: Colors.black,
@@ -102,7 +117,16 @@ class _SecondPageState extends State<SecondPage> {
               ),
               SizedBox(height: 10.0),
               Container(
-                child: DropdownMenuExample(),
+                child: DropdownMenuExample(
+
+                  onBookTypeSelected: (bookType) {
+  setState(() {
+  selectedBookType = bookType;
+
+  }
+  );
+  },
+                ),
               ),
               SizedBox(height: 18.0),
               Container(
@@ -141,8 +165,14 @@ class _SecondPageState extends State<SecondPage> {
 
 const List<String> list = <String>["Hardcover ", "Paperback","Kindle","Audiobook"];
 
+
+
 class DropdownMenuExample extends StatefulWidget {
-  const DropdownMenuExample({super.key});
+
+  final ValueChanged<String> onBookTypeSelected;
+  const DropdownMenuExample({Key? key, required this.onBookTypeSelected}) : super(key: key);
+
+  //const DropdownMenuExample({super.key});
 
   @override
   State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
@@ -153,9 +183,23 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
 
   @override
   Widget build(BuildContext context) {
-    return DropdownMenu<String>(
-      initialSelection: list.first,
-      onSelected: (String? value) {
+    return DropdownButton(
+      value: dropdownValue,
+     // initialSelection: list.first,
+      onChanged: (String? value) {
+        widget.onBookTypeSelected(value!); // Notify the parent about the selected book type
+        setState(() {
+          dropdownValue = value;
+        });
+      },
+      items: list.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+
+     /* onSelected: (String? value) {
         // This is called when the user selects an item.
         setState(() {
           dropdownValue = value!;
@@ -163,7 +207,7 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
       },
       dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
         return DropdownMenuEntry<String>(value: value, label: value);
-      }).toList(),
+      }).toList(),*/
     );
   }
 }
