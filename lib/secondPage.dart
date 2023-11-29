@@ -17,6 +17,7 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.grey[200],
         title: Text('Bookworm',
           style: TextStyle(
@@ -26,7 +27,7 @@ class _SecondPageState extends State<SecondPage> {
           ),
 
         ),
-        centerTitle: true,
+        //centerTitle: true,
       ),
       body: ListView(
         children: [Padding(
@@ -138,7 +139,7 @@ class _SecondPageState extends State<SecondPage> {
 //DROPDOWN
 
 
-const List<String> list = <String>["Hardcover", "Paperback","Kindle","Audiobook"];
+const List<String> list = <String>["Hardcover ", "Paperback","Kindle","Audiobook"];
 
 class DropdownMenuExample extends StatefulWidget {
   const DropdownMenuExample({super.key});
